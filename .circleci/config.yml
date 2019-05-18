@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run: git config user.email "hiroi+circleci@users.noreply.github.com"
       - run: git config user.name "hiroi+circleci"
-      - run: make make_commit
+      - run: bash -xe diff_commit.sh
       - run: git push origin master
 
 workflows:
