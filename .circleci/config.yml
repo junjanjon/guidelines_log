@@ -1,0 +1,22 @@
+# Use the latest 2.1 version of CircleCI pipeline processing engine, see https://circleci.com/docs/2.0/configuration-reference/
+version: 2.1
+
+defaults: &defaults
+  working_directory: ~/workspace
+  docker:
+    - image: node:12.1
+
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: git config user.email "hiroi+circleci@users.noreply.github.com"
+      - run: git config user.name "hiroi+circleci"
+      - run: make make_commit
+      - run: git push origin master
+
+workflows:
+  Build:
+    jobs:
+      - build
