@@ -17,6 +17,17 @@ jobs:
       - run: git push origin master
 
 workflows:
-  Build:
+  version: 2
+  commit-workflow:
+    jobs:
+      - build
+  scheduled-workflow:
+    triggers:
+      - schedule:
+          cron: "0 1 * * *"
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - build
