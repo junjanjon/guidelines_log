@@ -380,7 +380,7 @@
 									<li id="2.4.4"><strong>2.4.4</strong> Appでデバイスの再起動や、Appの中心的な機能に無関係なシステム設定の変更を推奨または要求することのないようにしてください（Wi-Fiをオフにする、セキュリティ機能を無効にするなど）。</li>
 									<li id="2.4.5"><strong>2.4.5</strong> <span class="nowrap">Mac App Store</span>から配信されるAppには、以下の追加要件が適用されます。
 										<ul class="no-bullet margin-top-small">
-											<li><strong>（i）</strong>Appは適切にサンドボックス化され、「<a href="/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010672">macOS ファイルシステムドキュメント（英語）</a>」に準拠している必要があります。また、他のAppによって保存されたユーザーデータ（ブックマーク、連絡先、カレンダーのエントリなど）を修正する場合、適切なmacOS APIのみを使用する必要があります。</li>
+											<li><strong>（i）</strong>Appは適切にSandbox化され、「<a href="/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010672">macOS ファイルシステムドキュメント（英語）</a>」に準拠している必要があります。また、他のAppによって保存されたユーザーデータ（ブックマーク、連絡先、カレンダーのエントリなど）を修正する場合、適切なmacOS APIのみを使用する必要があります。</li>
 											<li><strong>（ii）</strong>AppはXcodeで提供されるテクノロジーを使用してパッケージ化し、提出する必要があります。サードパーティ製のインストーラは使用できません。また、自己完結型の、単一のAppインストールバンドルである必要があります。コードまたはリソースを共有ロケーションにインストールすることはできません。</li>
 											<li><strong>（iii）</strong>Appを自動的に起動することは許可されません。また、Appの起動時やログイン時に、同意または開始プロセスを経ることなく別のコードを自動的に実行したり、ユーザーの同意を得ることなくAppの終了後にコードの実行を継続したりすることはできません。Appのアイコンを自動的にDockに追加することや、ショートカットを自動的にユーザーのデスクトップに作成することは許可されません。</li>
 											<li><strong>（iv）</strong>AppによってスタンドアロンのApp、KEXT、追加のコード、リソースがダウンロードまたはインストールされ、機能が追加されるようにすることは許可されません。また、審査プロセスの後でAppを大きく変更することはできません。</li>
