@@ -37,7 +37,20 @@
 </head>
 <body>
 
-	<aside id="ac-gn-segmentbar" class="ac-gn-segmentbar" lang="en-US" dir="ltr">
+	
+<link rel="stylesheet" href="/assets/styles/suggest-lang.css?35232135133" type="text/css" />
+<script src="/assets/scripts/suggest-lang.js?35232135133"></script>
+<div id="suggest-lang" class="ribbon hide">
+	<div class="ribbon-content-wrapper">
+		<div class="ribbon-content row">
+			<div class="column large-12 large-centered">
+				<a id="suggest-closer" class="icon icon-after icon-reset"></a>
+				<p><a href="#" id="suggest-link" class="ribbon-link more">View in English</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+<aside id="ac-gn-segmentbar" class="ac-gn-segmentbar" lang="en-US" dir="ltr">
 </aside>
 <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate" />
 <nav id="ac-globalnav" class="no-js" role="navigation" aria-label="Global" data-hires="false" data-analytics-region="global nav" lang="en-US" dir="ltr"
@@ -151,7 +164,17 @@
 							</button>
 					</div>
 				</div>
-				<aside id="ac-gn-searchresults" class="ac-gn-searchresults" data-string-quicklinks="Quick Links" data-string-suggestions="Suggested Searches" data-string-noresults=""></aside>
+				<aside id="ac-gn-searchresults" class="ac-gn-searchresults hidden">
+                    <section class="ac-gn-searchresults-section ac-gn-searchresults-section-defaultlinks">
+                        <div class="ac-gn-searchresults-section-wrapper">
+							<div class="search-group-checkbox hidden"><input id="group-input" type="checkbox" name="group-filter" value="hig">Limit search to <span id="group-search-label">Human Interface Guidelines</span></div>
+                            <h3 class="ac-gn-searchresults-header ac-gn-searchresults-animated">Quick Links</h3>
+                            <ul class="ac-gn-searchresults-list" id="defaultlinks" role="listbox">
+                            </ul>
+                            <span role="status" class="ac-gn-searchresults-count" aria-live="polite">5 Quick Links</span>
+                        </div>
+                    </section>
+                </aside>
 			</div>
 			<button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Cancel Search">
 					<span class="ac-gn-searchview-close-wrapper">
@@ -166,6 +189,8 @@
 <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
 <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
 <script src="/assets/scripts/ac-globalnav.built.js?26062125044"></script>
+<link rel="stylesheet" href="/assets/styles/search.css?17042142133">
+<script src="/assets/scripts/search.js?36232135133"></script>
 
 	<!-- metrics -->
 <script>
