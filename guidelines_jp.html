@@ -9,7 +9,7 @@
 <link rel="mask-icon" href="/apple-logo.svg" color="#333333">
 
 <link rel="stylesheet" href="/assets/styles/global.dist.css?55012346067" type="text/css" />
-<link rel="stylesheet" href="/assets/styles/dark-mode.css?25222346060" type="text/css" media="(prefers-color-scheme: dark)" data-color-scheme="dark" />
+<link rel="stylesheet" href="/assets/styles/dark-mode.css?18232327073" type="text/css" media="(prefers-color-scheme: dark)" data-color-scheme="dark" />
 <link rel="stylesheet" href="/assets/styles/localization.css?47012332049" type="text/css" />
 
 <script src="/assets/scripts/lib/jquery/jquery-3.6.0.min.js?41172203193"></script>
@@ -57,7 +57,44 @@
 </head>
 <body class="dmf">
 
-	<link rel="stylesheet" href="/assets/styles/globalnav.css?41172203193" type="text/css" />
+	<script>
+	const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+	if (window.Settings.preferredColorScheme) {
+		const colorTheme = (window.Settings.preferredColorScheme === 'auto') && !prefersDark ? 'light' : (window.Settings.preferredColorScheme === 'light') ? 'light' : 'dark'
+		document.body.setAttribute('data-color-scheme', colorTheme);
+	} else {
+		document.body.setAttribute('data-color-scheme', prefersDark ? 'dark' : 'light');
+	}
+</script>
+<style>
+	/* background */
+	body[data-color-scheme='dark'].dmf {background-color: #000;}
+	html body[data-color-scheme='dark'].dmf .bg-alt {background-color:var(--fill-tertiary);}
+	html body[data-color-scheme='dark'].dmf .bg-blue {background-color:var(--fill-blue-secondary);}
+	html body[data-color-scheme='dark'].dmf .bg-green-blue {background:linear-gradient(135deg, #65976d 0%, #588ea4 100%)}
+	html body[data-color-scheme='dark'].dmf .bg-yellow {background: linear-gradient(to bottom, var(--fill-tertiary) 0%, var(--fill-tertiary-alt) 100%);}
+	html body[data-color-scheme='dark'].dmf .bg-light {background-color:var(--fill-secondary-alt);}
+	html body[data-color-scheme='dark'].dmf .bg-gradient, html body[data-color-scheme='dark'].dmf .bg-grad {background:linear-gradient(to bottom, var(--dark) 0%, var(--fill-gray-secondary-alt) 100%);}
+	html body[data-color-scheme='dark'].dmf .bg-grad-down {background:linear-gradient(to bottom, var(--dark) 0%, var(--fill-gray-secondary-alt) 100%);}
+	html body[data-color-scheme='dark'].dmf .bg-grad-up {background:linear-gradient(to bottom, var(--fill-gray-secondary-alt) 0%, var(--dark) 100%);}
+	html body[data-color-scheme='dark'].dmf .bg-blue-gradient, html body[data-color-scheme='dark'].dmf .bg-gradient-blue {background:linear-gradient(to bottom, var(--fill-blue-gradient-light) 0%, var(--fill-blue-gradient-dark) 100%);}
+	html body[data-color-scheme='dark'].dmf .bg-blue-gradient-alt {background: linear-gradient(90deg, #061830 0%, #102d48 100%);}
+	/* globalNav */
+	html body[data-color-scheme='dark'] #ac-globalnav {background: var(--fill-tertiary);}
+	/* localNav */
+	html body[data-color-scheme='dark'] .localnav.localnav-scrim .localnav-background,
+	html body[data-color-scheme='dark'] .localnav-scrim.localnav.localnav-background {
+		background-color: rgba(29, 29, 31, 0.9);
+	}
+	@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+		html body[data-color-scheme='dark'] .localnav.localnav-scrim .localnav-background,
+		html body[data-color-scheme='dark'] .localnav-scrim.localnav.localnav-background {
+			background-color: rgba(29, 29, 31, 0.72);
+		}
+	}
+</style>
+<link rel="stylesheet" href="/assets/styles/globalnav.css?41172203193" type="text/css" />
 
 <link rel="stylesheet" href="/assets/styles/suggest-lang.css?41172203193" type="text/css" />
 <div id="suggest-lang" class="ribbon hide">
