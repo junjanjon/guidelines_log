@@ -353,7 +353,7 @@
 							<li>アプリの品質が高く、ユーザーの多様な意見に敬意が払われている限り、App&nbsp;Storeではあらゆる見解を自由に公開することができます。Appleでは、そのコンテンツや挙動が許される限度を超えていると考えられるアプリを却下します。では、その限度とは何でしょうか。それを説明するには、最高裁判所の判事がかつて述べた、「見ればわかる」という言葉がヒントになります。もしその限度を超えたときは、本人がそのことを一番知っているはずです。</li>
 							<li>システムに対して不正行為（審査プロセスに対する不正、ユーザーデータの不正取得、他のデベロッパが作成したアプリのコピー、アプリの評価やApp&nbsp;Storeでの発見性の不正操作など）があった場合、そのデベロッパのアプリはApp Storeから削除され、デベロッパはApple&nbsp;Developer&nbsp;Programから除名されます。</li>
 							<li>デベロッパは、アプリがすべての点において本ガイドラインに準拠していることを確認する責任があります。広告ネットワーク、分析サービス、サードパーティ製のSDKも含め、注意深く検証して選択するようにしてください。</li>
-							<li>デベロッパに一般提供されていない機能やテクノロジーの中には、限定された使用ケースにおいてエンタイトルメントが付与される場合があるものがあります。たとえば、CarPlayオーディオ、ハイパーバイザ、特権ファイル操作についてはエンタイトルメントを付与しています。エンタイトルメントについて詳しくは、developer.apple.comで提供されているドキュメントを確認してください。</li>
+							<li>デベロッパに一般提供されていない機能やテクノロジーの一部は、限定的なユースケースにおいて、<a href="https://developer.apple.com/documentation/bundleresources/entitlements">エンタイトルメント<span class="loc-en-only"></span></a>が付与される場合があります。たとえば、CarPlayオーディオ、ハイパーバイザ、特権ファイルの操作についてはエンタイトルメントを付与しています。</li>
 						</ul>
 						<p>本ガイドラインが、審査プロセスの通過に役立ち、承認と却下の決定における一貫性を保つ一助となることを願っています。この文書は今後変更される可能性があります。新しいアプリの開発により新しい疑問が生じることもあり、その場合は随時新しい規定が追加される可能性があります。そのような変化を生み出すのは皆さまのアプリかもしれません。Appleは変化を歓迎し、デベロッパの成果に敬意を表します。デベロッパの皆さまが才能を発揮し、同時に十分な収益を得ることができる、世界でもっとも優れたプラットフォームを実現するため、Appleは全力で取り組んでいます。</p>
 
@@ -370,14 +370,14 @@
 							<li>アプリが以下に例を挙げる文書のガイダンスに従っていることを確認する</li>
 						</ul>
 						<div id="documentation">
-							<p><strong>開発に関するガイドライン</strong></p>
+							<p><strong>デベロッパ向けドキュメント</strong></p>
 							<ul class="links small">
+								<li class="document"><a href="/documentation/swiftui/">SwiftUI<span class="loc-c"></span></a></li>
 								<li class="document"><a href="/jp/documentation/uikit/">UIKit<span class="loc-cj"></span></a></li>
 								<li class="document"><a href="/documentation/appkit/">AppKit<span class="loc-en-only"></span></a></li>
-								<li class="document"><a href="/documentation/watchkit/">WatchKit<span class="loc-en-only"></span></a></li>
 								<li class="document"><a href="/jp/app-extensions/">App Extension</a></li>
-								<li class="document"><a href="/icloud/documentation/data-storage/">iOSデータストレージガイドライン<span class="loc-en-only"></span></a></li>
-								<li class="document"><a href="/documentation/foundation/file_system/about_apple_file_system/">Apple File System<span class="loc-en-only"></span></a></li>
+								<li class="document"><a href="https://developer.apple.com/documentation/foundation/optimizing_your_app_s_data_for_icloud_backup/">iCloudバックアップのためにアプリのデータを最適化する<span class="loc-en-only"></span></a></li>
+								<li class="document"><a href="/documentation/foundation/file_system/about_apple_file_system/">Appleのファイルシステム<span class="loc-en-only"></span></a></li>
 								<li class="document"><a href="/jp/help/app-store-connect/">App&nbsp;Store&nbsp;Connectヘルプ</a></li>
 								<li class="document"><a href="/jp/help/account/">デベロッパアカウントヘルプ</a></li>
 							</ul>
@@ -395,7 +395,7 @@
 						</div>
 						<p data-nr class="margin-top"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" />マークのあるガイドラインは、EUにおける<a href="https://developer.apple.com/support/dma-and-apps-in-the-eu/#notarization-for-ios-apps">iOSアプリ向けの公証<span class="loc-en-only"></span></a>に適用されます。</p>
 
-						<h3 data-nr data-sidenav id="safety"><span id="1"></span>1.安全性</h3>
+						<h3 data-nr data-sidenav id="safety"><span id="1"></span>1. 安全性</h3>
 						<p class="section-intro">App&nbsp;Storeからアプリをインストールする際、ユーザーは、その安全性、つまりアプリに不適切または不快なコンテンツが含まれず、デバイスを損傷することがなく、使用しても物理的な危害が生じないものとして期待しています。以下に主な注意点をまとめます。デベロッパが、ユーザーを動揺させ不快にさせることを目的としている場合、App&nbsp;Storeでアプリを公開することはできません。こうした規定の一部は、iOSアプリの公証にも適用されます。</p>
 						<ul class="no-bullet">
 							<li data-sidenav="1.1 不適切なコンテンツ" id="objectionable-content"><span id="1.1"></span><strong>1.1 不適切なコンテンツ</strong>
@@ -451,10 +451,13 @@
 							</li>
 						</ul>
 
-						<h3 data-nr data-sidenav id="performance"><span id="2"></span>2.パフォーマンス</h3>
+						<h3 data-nr data-sidenav id="performance"><span id="2"></span>2. パフォーマンス</h3>
 						<ul class="no-bullet">
-							<li data-sidenav="2.1 アプリの完全性" id="app-completeness"><span id="2.1"></span><strong>2.1 アプリの完全性</strong>
-								<p>App&nbsp;Reviewに提出するアプリ（予約注文に対応するアプリも含む）は、必要となるあらゆるメタデータや有効なURLを含む最終バージョンである必要があります。プレースホルダテキスト、コンテンツのないWebサイト、その他の一時的なコンテンツはすべて提出前に取り除く必要があります。提出前に、実際にデバイスを使用してアプリのバグおよび安定性をテストし、ログインが必要な場合はデモアカウント情報を記載してください（また、バックエンドサービスを有効にしてください）。法律上またはセキュリティ上の義務のためデモアカウントを用意できない場合は、Appleによる事前の承認を得た上で、デモアカウントの代わりにデモモードを内蔵することも可能です。その場合は、デモモードでアプリの機能をすべて確認できるようにしてください。アプリ内課金を含む場合は、その機能が完全かつ最新で、審査側に明示されているようにしてください。それが不可能な場合は、その理由を「メモ」欄で説明してください。App&nbsp;Reviewをソフトウェアのテストサービスとは考えないでください。クラッシュする、または明らかな技術上の問題がある不完全なアプリバンドルやバイナリは却下されます。</p>
+							<li data-nr data-sidenav="2.1 アプリの完全性" id="app-completeness"><span id="2.1"></span><strong>2.1 アプリの完全性</strong>
+								<ul class="no-bullet margin-top-small">
+									<li data-nr><strong>(a)</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASR & NR" /></span>App&nbsp;Reviewに提出するアプリ（予約注文に対応するアプリも含む）は、必要となるあらゆるメタデータや有効なURLを含む最終バージョンである必要があります。プレースホルダテキスト、コンテンツのないWebサイト、その他の一時的なコンテンツは、すべて提出前に取り除く必要があります。提出前に、実際にデバイスを使用してアプリのバグおよび安定性をテストし、ログインが必要な場合はデモアカウント情報を記載してください（また、バックエンドサービスを有効にしてください）。法律上またはセキュリティ上の義務のためデモアカウントを用意できない場合は、Appleによる事前の承認を得た上で、デモアカウントの代わりにデモモードを内蔵することも可能です。その場合は、デモモードでアプリの機能をすべて確認できるようにしてください。クラッシュする、または明白な技術上の問題がある不完全なApp Bundleやバイナリは却下されます。</li>
+									<li><strong>(b)</strong>アプリ内課金を含む場合は、その機能が完全かつ最新で、審査側に明示されており、正しく機能していることを確認してください。構成済みのアプリ内課金アイテムがアプリ内で見つからない場合や審査できない場合は、審査メモでその理由を説明してください。</li>
+								</ul>
 							</li>
 							<li data-sidenav="2.2 ベータ版テスト" id="beta-testing"><span id="2.2"></span><strong>2.2 ベータ版テスト</strong>
 								<p>デモ版、ベータ版、トライアル版のアプリではApp&nbsp;Storeでは公開せず、代わりにTestFlightを使用してください。TestFlightを使ってベータ版配信のために提出されるアプリは、一般公開に向けて「App&nbsp;Reviewガイドライン」に準拠している必要があります。ただし、TestFlightを使用しているアプリは、クラウドファンディングの報酬など、何らかの対価としてテスターに配信することはできません。ベータ版への大きな更新がある場合は、テスターに配信する前にTestFlight App&nbsp;Reviewに提出する必要があります。詳しくは、「<a href="/jp/testflight/">TestFlightベータ版テスト</a>」のページをご参照ください。</p>
@@ -476,7 +479,7 @@
 									<li data-nr id="2.3.7"><strong>2.3.7</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span> 独自性のあるアプリ名を選び、アプリを正確に説明するキーワードを選んでください。App Storeのシステムを操作する目的で、メタデータに商標登録用語、人気のアプリ名、価格情報、その他無関係のフレーズを盛り込むことは認められません。アプリ名は30文字以内にする必要があります。なお、アプリ名、サブタイトル、スクリーンショット、プレビューなどのメタデータには、メタデータタイプに該当しない価格、用語、説明などは含めないでください。アプリにサブタイトルをつけると、内容についてさらに伝えることができます。サブタイトルはApple標準のメタデータの規定に従って作成する必要があり、不適切なコンテンツ、他のアプリへの言及、製品について真偽を証明できない訴求などを含めることはできません。Appleには、不適切なキーワードを随時修正したり、悪用を防ぐためにその他の適切な措置を講じたりする権限があります。</li>
 									<li data-nr id="2.3.8"><strong>2.3.8</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span> メタデータは、すべてのユーザーに対して適切なものである必要があります。そのため、アプリの年齢制限指定が高い場合でも、アプリやアプリ内課金のアイコン、スクリーンショット、プレビューは「4歳以上」の対象年齢にふさわしいものにしてください。たとえば、暴力的な描写を含むゲームアプリの場合でも、恐ろしい死の描写や特定のキャラクターに銃が向けられている画面は使用しないでください。アプリのメタデータに「子ども用」といった用語を使用できるのは、App&nbsp;Storeの「子ども向け」カテゴリのアプリに限られます。混乱を避けるため、アプリの名前やアイコン（小アイコン、大アイコン、Apple&nbsp;Watchアプリ用のアイコン、代替アイコン）などのメタデータは、一貫して類似したものである必要があります。</li>
 									<li id="2.3.9"><strong>2.3.9</strong> デベロッパは、アプリのアイコン、スクリーンショット、プレビューなどあらゆる素材データを使用する権利を確保する責任があります。また、実在のユーザーのデータではなく架空のアカウント情報を表示してください。</li>
-									<li id="2.3.10"><strong>2.3.10</strong> アプリはiOS、iPadOS、macOS、tvOS、watchOSでの使用を前提としてください。承認された特定のインタラクティブ機能がある場合を除き、他のモバイルプラットフォームまたは代替アプリマーケットプレイスの名前、アイコン、画像をアプリまたはメタデータに含めることはできません。アプリのメタデータとして記述できるのは、アプリとその操作性に関する情報のみです。関係のない情報は含めないでください。</li>
+									<li id="2.3.10"><strong>2.3.10</strong> アプリはサポート対象とするAppleプラットフォームでのユーザー体験を想定して実装してください。承認された特定のインタラクティブ機能がある場合を除き、他のモバイルプラットフォームまたは代替アプリマーケットプレイスの名前、アイコン、画像をアプリまたはメタデータに含めることはできません。アプリのメタデータとして記述できるのは、アプリとその操作性に関する情報のみです。関係のない情報は含めないでください。</li>
 									<li id="2.3.11"><strong>2.3.11</strong> App&nbsp;Storeでの予約注文に対応するアプリを提出する場合は、提出時点でアプリが完成しており、配信可能な状態になっている必要があります。最終的にリリースするアプリが、予約注文時にプロモーションしたものと著しく異なることがないようにしてください。アプリに大きな変更を加える場合（ビジネスモデルの変更など）は、予約注文の販売をあらためて最初から行う必要があります。</li>
 									<li id="2.3.12"><strong>2.3.12</strong> アプリの「新機能」のテキストとして、新しい機能や製品の変更について明確に記述する必要があります。簡単なバグ修正、セキュリティアップデート、性能改善については汎用的な「説明」欄を使用できますが、より重要な変更事項は「新機能」欄に記載する必要があります。</li>
 									<li id="2.3.13"><strong>2.3.13</strong> アプリ内イベントは、アプリ内で提供するタイムリーなイベントです。App&nbsp;Storeでイベントを公開するには、App&nbsp;Store&nbsp;Connect上で規定するイベントタイプに該当する必要があります。すべてのイベントメタデータは正確であり、アプリ全般に関するものではなく、直接イベントに関わるものである必要があります。イベントはApp&nbsp;Store&nbsp;Connect上で選択した日時で開催される必要があります（複数のストアフロントに関わる場合も含む）。本ガイドラインのセクション 3「ビジネス」の規定に違反しない限り、イベントの収益化は認められます。イベントのディープリンクは、アプリ内の正しいコンテンツに直接誘導する必要があります。<a href="/jp/app-store/in-app-events/">アプリ内イベント</a>で、認められるイベントメタデータとディープリンクに関するガイドラインの詳細を確認してください。</li>
@@ -484,7 +487,7 @@
 							</li>
 							<li data-nr data-sidenav="2.4 ハードウェアの互換性" id="hardware-compatibility"><span id="2.4"></span><strong>2.4 ハードウェアの互換性</strong>
 								<ul class="no-bullet margin-top-small">
-									<li id="2.4.1"><strong>2.4.1</strong> ユーザーがアプリを最大限に活用できるように、iPhone向けのアプリは可能な限りiPadでも実行できるようにしてください。Appleは、ユーザーがすべてのデバイスで使用できるように、ユニバーサルアプリの構築を検討することをお勧めします。詳しくは、「<a href="/go/?id=xcode-universal">ユニバーサルアプリ<span class="loc-en-only"></span></a>」をご確認ください。</li>
+									<li id="2.4.1"><strong>2.4.1</strong> ユーザーがアプリを最大限に活用できるように、iPhone向けのアプリは可能な限りiPadでも実行できるようにしてください。アプリを構築する際、ユーザーが<a href="https://developer.apple.com/documentation/xcode/configuring-a-multiplatform-app-target">すべてのデバイス<span class="loc-en-only"></span></a>でアプリを使用できるよう検討することを推奨します。</li>
 									<li data-nr id="2.4.2"><strong>2.4.2</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span> 電力を効率的に使用できるように、またデバイスを損傷させるおそれのない方法で使用できるようにアプリを設計してください。アプリが急速にバッテリーを消費すること、過度な熱を発生させること、デバイスのリソースに不必要な負荷をかけることがないようにしてください。たとえば、充電中にデバイスをマットレスや枕の下に置くよう促したり、ソリッドステートドライブに過剰な回数の書き込みを行ったりするなどが例として挙げられます。アプリでは、サードパーティの広告が表示されるものも含め、暗号通貨のマイニングのような無関係なバックグラウンドプロセスを実行することはできません。</li>
 									<li id="2.4.3"><strong>2.4.3</strong> Apple&nbsp;TV用のアプリは、Siri Remoteやサードパーティ製ゲームコントローラ以外のハードウェアによる入力がなくても使用できるようにする必要があります。ただし、他の周辺機器を接続することで機能がさらに高まるようにすることは問題ありません。ゲームコントローラを必須とする場合は、追加の機器が必要であることをユーザーが理解できるよう、メタデータの中で明確に説明してください。</li>
 									<li data-nr id="2.4.4"><strong>2.4.4</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span> デバイスの再起動や、アプリの中心的な機能に無関係なシステム設定の変更をアプリ内で推奨または要求することは認められません。（Wi-Fiをオフにする、セキュリティ機能を無効にするなど）。</li>
@@ -510,8 +513,8 @@
 									<li data-nr id="2.5.4"><strong>2.5.4</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span> マルチタスクアプリには、VoIP、オーディオ再生、位置情報、タスクの完了、ローカル通知など、意図された目的のためのバックグラウンドサービスのみを使用してください。</li>
 									<li id="2.5.5"><strong>2.5.5</strong> アプリは、IPv6のみのネットワークで完全に機能する必要があります。</li>
 									<li data-nr id="2.5.6"><strong>2.5.6</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span> Webを閲覧するアプリでは、適切なWebKitフレームワークとWebKit JavaScriptを使用する必要があります。アプリで代替Webブラウザエンジンを使用するためのエンタイトルメントをリクエストできます。<a href="https://developer.apple.com/support/alternative-browser-engines/">これらのエンタイトルメントの詳細<span class="loc-en-only"></span></a>をご確認ください。</li>
-									<li id="2.5.7"><strong>2.5.7</strong> （意図的に省略）</li>
-									<li id="2.5.8"><strong>2.5.8</strong> 代替デスクトップ／ホーム画面環境を作成するアプリ、マルチアプリのウィジェットをシミュレーションするアプリは却下されます。</li>
+									<li id="2.5.7"><strong>2.5.7</strong>（意図的に省略）</li>
+									<li id="2.5.8"><strong>2.5.8</strong> 代替デスクトップ／ホーム画面環境を作成するアプリは却下されます。</li>
 									<li data-nr id="2.5.9"><strong>2.5.9</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span> 音量を上げる／下げる、サウンドオン／オフといった標準スイッチの機能、および他のネイティブユーザーインターフェイスの要素やその挙動を変更または無効にするアプリは却下されます。たとえば、別のアプリへのリンクやその他ユーザーが動作を想定できる機能をブロックすることはできません。</li>
 									<li id="2.5.10"><strong>2.5.10</strong> 空の広告バナーまたはテスト広告が表示されるアプリは提出しないでください。</li>
 									<li data-nr id="2.5.11"><strong>2.5.11</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span> SiriKitとショートカット <ul class="no-bullet margin-top-small">
@@ -534,7 +537,7 @@
 							</li>
 						</ul>
 
-						<h3 data-sidenav id="business"><span id="3"></span>3.ビジネス</h3>
+						<h3 data-sidenav id="business"><span id="3"></span>3. ビジネス</h3>
 						<p class="section-intro">App&nbsp;Storeでアプリによって収入を得る方法は数多くあります。ご自身のビジネスモデルが明白でない場合は、メタデータとApp&nbsp;Reviewの「メモ」欄で説明するようにしてください。アプリの仕組みが明確でない場合やアプリ内課金がわかりにくい場合は、審査が遅れ、却下の原因となる可能性があります。価格はデベロッパが決定しますが、Appleでは、明らかに高すぎるアプリやアプリ内課金アイテムを配信することはできません。ユーザーに不当に高い金額を請求するアプリは却下されます。</p>
 						<p class="section-intro">デベロッパがカスタマーレビューの内容を改ざんしたり、金銭や報酬を提供してフィードバックを得たり、フィードバックの一部のみに絞って表示したり、偽のフィードバックを書くなどしたりしてチャートランキングの上昇を図るか、そのようなサービスを提供するサードパーティと協力したことが判明した場合、AppleはApp&nbsp;Storeの信頼性を保つための措置を取り、そのデベロッパをApple&nbsp;Developer Programから除名する場合があります。</p>
 						<ul class="no-bullet">
@@ -629,7 +632,7 @@
 							</li>
 						</ul>
 
-						<h3 data-nr data-sidenav id="design"><span id="4"></span>4.デザイン</h3>
+						<h3 data-nr data-sidenav id="design"><span id="4"></span>4. デザイン</h3>
 						<p class="section-intro">Appleのお客様は、シンプルで、洗練され、革新的で、使用が簡単な製品に高い価値を見出します。そして、それはAppleがApp&nbsp;Storeのアプリに求めるものと同じです。デザインを優れたものにできるかどうかはデベロッパ次第ですが、App&nbsp;Storeで承認されるためには次のような基準があります。加えて、承認を受けた後も、アプリが継続的に機能し、新規および既存ユーザーの双方にとって魅力的であり続けるよう、アップデートしていく必要があります。機能しなくなったり、サービスの品質が低下したりしたアプリは、随時App&nbsp;Storeから削除される可能性があります。</p>
 						<ul class="no-bullet">
 							<li data-nr data-sidenav="4.1 模倣" id="copycats"><span id="4.1"></span><strong>4.1 模倣</strong>
@@ -649,8 +652,8 @@
 											<li><strong>（ii）</strong>初回起動時に正しく機能させるために追加のリソースをダウンロードする必要があるアプリでは、その追加データのサイズをユーザーに開示し、起動前にこれらのリソースのダウンロードを促してください。</li>
 										</ul>
 									</li>
-									<li id="4.2.4"><strong>4.2.4</strong> （意図的に省略）</li>
-									<li id="4.2.5"><strong>4.2.5</strong> （意図的に省略）</li>
+									<li id="4.2.4"><strong>4.2.4</strong>（意図的に省略）</li>
+									<li id="4.2.5"><strong>4.2.5</strong>（意図的に省略）</li>
 									<li id="4.2.6"><strong>4.2.6</strong> 有料のテンプレートやアプリ作成サービスを使用して制作されたアプリは、コンテンツのプロバイダから直接提出されたものでない限り却下されます。こうしたサービスのプロバイダは、顧客の代わりにアプリを提出するのではなく、独自のユーザーエクスペリエンスを提供する革新的なアプリを、顧客が自身で作成することができるようなツールを提供する必要があります。また、こうしたサービスのプロバイダは、1つのバイナリを作成してすべてのクライアントコンテンツを統合型、もしくは「ピッカー」モデルでホストすることができます。たとえば顧客である複数のレストランが、カスタマイズされた個別のエントリやページで表示されるレストラン検索アプリや、さまざまな顧客の複数のイベントが個別のエントリで表示されるイベント情報アプリなどを提出することができます。</li>
 									<li id="4.2.7"><strong>4.2.7 リモートデスクトップクライアント：</strong>リモートデスクトップのアプリが、ホストデバイスの一般的なミラーリングではなく、特定のソフトウェアやサービスをミラーリングする場合は、以下に準拠する必要があります。 <ul class="no-bullet margin-top-small">
 											<li><strong>（a）</strong>アプリはユーザーが所有するホストデバイスであるパーソナルコンピュータ、またはユーザーが所有する専用のゲームコンソールにのみ接続し、ホストデバイスとクライアントの両方がローカルのLANベースネットワークに接続されている必要があります。</li>
@@ -687,10 +690,10 @@
 										</ul>
 									</li>
 									<li data-nr id="4.4.2"><strong>4.4.2</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span> Safari Extensionは、該当するAppleオペレーティングシステムの現行バージョンのSafariで実行する必要があります。システムまたはSafariのユーザーインターフェイスを構成する要素と相互干渉してはならず、悪意のある、または誤解を生むコンテンツ、またはコードを使用することは許可されません。この規定に違反すると、Apple&nbsp;Developer Programから除名されることになります。Safari Extensionを使用して、機能の動作に必要でないWebサイトにアクセスするよう要求することは認められません。</li>
-									<li id="4.4.3"><strong>4.4.3</strong> （意図的に省略）</li>
+									<li id="4.4.3"><strong>4.4.3</strong>（意図的に省略）</li>
 								</ul>
 							</li>
-							<li data-nr data-sidenav="4.5 Appleのサイトとサービス" id="apple-sites-and-services"><span id="4.5"></span><strong>4.5<span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span> Appleのサイトとサービス</strong>
+							<li data-nr data-sidenav="4.5 Appleのサイトとサービス" id="apple-sites-and-services"><span id="4.5"></span><strong>4.5 Appleのサイトとサービス</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASR & NR" /></span>
 								<ul class="no-bullet margin-top-small">
 									<li data-nr id="4.5.1"><strong>4.5.1</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span> アプリではiTunes&nbsp;Store RSSフィードなどの承認済みApple RSSフィードを使用できますが、Appleのサイト（apple.com、iTunes&nbsp;Store、App&nbsp;Store、App&nbsp;Store&nbsp;Connect、デベロッパポータルなど）から情報を取得することや、その情報を使用してランキングを作成することは許可されません。</li>
 									<li data-nr id="4.5.2"><strong>4.5.2</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span> Apple Music <ul class="no-bullet margin-top-small">
@@ -705,9 +708,7 @@
 									<li data-nr id="4.5.6"><strong>4.5.6</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span> アプリやそのメタデータでは、Appleの絵文字として表示されるUnicode文字を使用することができます。Appleの絵文字を他のプラットフォームで使用したり、アプリバイナリの中に直接埋め込んだりすることはできません。</li>
 								</ul>
 							</li>
-							<li data-nr data-sidenav="4.6 アプリの代替アイコン" id="alternate-app-icons"><span id="4.6"></span><strong>4.6 アプリの代替アイコン</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span>
-								<p data-nr>スポーツチームの好みに合わせてアイコンを変えるなど、アプリをカスタムアイコンで表示することは許可されています。ただし、アイコンの変更はユーザー自身が行い、元のアイコンに戻すための設定がアプリに用意されている場合に限られます。用意するアイコンはすべてアプリのコンテンツに関係するものである必要があります。また、設定や通知などに表示されるアイコンがSpringBoardでの新しいアイコンと一致するよう、変更がシステムのすべてのアセットに一貫して適用されるようにする必要があります。</p>
-
+							<li><span id="4.6"></span><strong>4.6</strong>（意図的に省略）</li>
 <li data-sidenav="4.7 ミニアプリ、ミニゲーム、ストリーミングゲーム、チャットボット、プラグイン、ゲームエミュレータ" id="third-party-software"><span id="4.7"></span><strong>4.7 ミニアプリ、ミニゲーム、ストリーミングゲーム、チャットボット、プラグイン、ゲームエミュレータ</strong>
 								<p>アプリでは、HTML5のミニアプリ、ミニゲーム、ストリーミングゲーム、チャットボット、プラグインなど、バイナリに埋め込まれていない特定のソフトウェアを提供することができます。また、レトロゲームのコンソールエミュレータアプリは、ゲームのダウンロードを提供できます。デベロッパは、アプリで提供されるそのようなすべてのソフトウェアについて、当該ソフトウェアが本ガイドラインおよび適用されるすべての法令に準拠していることを確認することを含め、責任を負うものとします。ガイドラインに一項目でも準拠していないソフトウェアがある場合、アプリは却下されます。また、デベロッパは、ソフトウェアが4.7.1から4.7.5までの条項に定める追加規定に準拠していることも確認する必要があります。これらの追加規定は、App&nbsp;Storeに期待されているユーザー体験を維持し、ユーザーの安全を確保する上で重要です。</p>
 								<ul class="no-bullet margin-top-small">
@@ -755,7 +756,7 @@
 							</li>
 						</ul>
 
-						<h3 data-nr data-sidenav="5.法的事項" id="legal"><span id="5"></span>5.法的事項<span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="32" class="asr-nr" alt="ASRとNR" /></span></h3>
+						<h3 data-nr data-sidenav="5.法的事項" id="legal"><span id="5"></span>5. 法的事項<span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="32" class="asr-nr" alt="ASRとNR" /></span></h3>
 						<p data-nr class="section-intro">アプリは提供されるすべての地域におけるあらゆる法的要件に準拠している必要があります（明確でない場合は法律家に相談してください）。法的要件は複雑ですが、各要件を確実に理解し、アプリを本ガイドラインのみでなく地域のすべての法律に準拠させることはデベロッパの責任です。また当然、犯罪または明らかに分別に欠ける行為を誘発、促進、奨励するアプリは却下されます。人身売買や児童労働の搾取を助長するアプリなど、極端な例においては、該当する当局に通報されます。</p>
 						<ul class="no-bullet">
 							<li data-nr data-sidenav="5.1 プライバシー" id="privacy"><span id="5.1"></span><strong>5.1 プライバシー</strong><span class="custom-tooltip-icon"><img src="/app-store/review/images/key-icon.svg" height="17" class="asr-nr" alt="ASRとNR" /></span>
@@ -883,7 +884,7 @@
 							<li><strong>バグ修正の提出：</strong>App&nbsp;Storeまたは代替アプリマーケットプレイスですでに配信されているアプリの場合、法的な問題または安全性の問題に関連しない限り、ガイドライン違反を理由にバグ修正が遅れることはありません。アプリが却下されたものの、このプロセスの対象に該当する場合は、App&nbsp;Store&nbsp;Connect経由でApp&nbsp;Reviewチームに直接連絡を取り、このプロセスの利用を希望する旨、および次回の提出時にその問題に対処する予定である旨を知らせてください。</li>
 						</ul>
 						<p>皆さまの新しいアイデアを楽しみにしています。</p>
-						<p data-nr class="margin-top typography-body-reduced">最終更新日：<a href="/jp/news/?id=0kjli9o1">2024年4月5日</a></p>
+						<p data-nr class="margin-top typography-body-reduced">最終更新日：<a href="/jp/news/?id=og4hxxz8">2024年6月10日</a></p>
 					</div>
 				</div>
 			</div>
