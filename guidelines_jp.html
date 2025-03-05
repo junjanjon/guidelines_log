@@ -9,9 +9,9 @@
 <link rel="icon" href="/favicon.ico" />
 <link rel="mask-icon" href="/apple-logo.svg" color="#333333">
 
-<link rel="stylesheet" href="/assets/styles/global.dist.css?02002514015" type="text/css" />
-<link rel="stylesheet" href="/assets/styles/dark-mode.css?17182448067" type="text/css" media="(prefers-color-scheme: dark)" data-color-scheme="dark" />
-<link rel="stylesheet" href="/assets/styles/localization.css?39172414191" type="text/css" />
+<link rel="stylesheet" href="/assets/styles/global.dist.css?38022530063" type="text/css" />
+<link rel="stylesheet" href="/assets/styles/dark-mode.css?02002524063" type="text/css" media="(prefers-color-scheme: dark)" data-color-scheme="dark" />
+<link rel="stylesheet" href="/assets/styles/localization.css?02002524063" type="text/css" />
 
 <script src="/assets/scripts/lib/jquery/jquery-3.6.0.min.js?17182448067"></script>
 <script src="/assets/scripts/settings.js?17182448067"></script>
@@ -24,9 +24,7 @@
 
 
 
-	<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=SF+Pro+JP&v=1" type="text/css" />
-<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=SF+Pro&v=2" type="text/css" />
-<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=SF+Pro+Icons&v=1" type="text/css" />
+	<link rel="stylesheet" href="//www.apple.com/wss/fonts?families=SF+Pro+JP,v1|SF+Pro,v3|SF+Pro+Icons,v3">
 <link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=SF+Mono&v=2" type="text/css" />
 <link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Apple+Icons&amp;v=1" type="text/css" />
 	<title>App Reviewガイドライン - Apple Developer</title>
@@ -48,7 +46,7 @@
 	<meta name="twitter:url" content="https://developer.apple.com/jp/app-store/review/guidelines/">
 
 	<link rel="stylesheet" href="/app-store/styles/app-store.css" type="text/css">
-	<link rel="stylesheet" href="/app-store/review/guidelines/styles/guidelines-sidenav.css?Thursday, 12-Sep-2024 22:22:15 GMT1" type="text/css" />
+	<link rel="stylesheet" href="/app-store/review/guidelines/styles/guidelines-sidenav.css?Monday, 03-Mar-2025 23:50:18 GMT1" type="text/css" />
 
 	<link rel="alternate" href="https://developer.apple.com/app-store/review/guidelines/" hreflang="en" />
 	<link rel="alternate" href="https://developer.apple.com/cn/app-store/review/guidelines/" hreflang="zh-CN" />
@@ -59,49 +57,44 @@
 
 <body class="dmf">
 	<script>
-	const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+	// Execute immediately to avoid UI flash
+	(function () {
+		const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+		const body = document.body;
 
-	if (window.Settings.preferredColorScheme) {
-		const colorTheme = (window.Settings.preferredColorScheme === 'auto') && !prefersDark ? 'light' : (window.Settings.preferredColorScheme === 'light') ? 'light' : 'dark'
-		document.body.setAttribute('data-color-scheme', colorTheme);
-	} else {
-		document.body.setAttribute('data-color-scheme', prefersDark ? 'dark' : 'light');
-	}
-</script>
-<style>
-	/* footer */
-	html body[data-color-scheme='dark'] #main section.section.section-resources.bg-alt {background-color:var(--fill-tertiary);color:var(--glyph-gray);}
-	html body[data-color-scheme='dark'] .developer-router-links {background-color:var(--fill-tertiary);color:var(--glyph-gray);}
-	html body[data-color-scheme='dark'] .footer {background-color:var(--fill-tertiary);color:var(--glyph-gray-tertiary);}
-	/* body backgrounds */
-	body[data-color-scheme='dark'].dmf {background-color: #000;}
-	html body[data-color-scheme='dark'].dmf .bg-alt {background-color:var(--fill-tertiary);}
-	html body[data-color-scheme='dark'].dmf .bg-blue {background-color:var(--fill-blue-secondary);}
-	html body[data-color-scheme='dark'].dmf .bg-green-blue {background:linear-gradient(135deg, #65976d 0%, #588ea4 100%)}
-	html body[data-color-scheme='dark'].dmf .bg-yellow {background: linear-gradient(to bottom, var(--fill-tertiary) 0%, var(--fill-tertiary-alt) 100%);}
-	html body[data-color-scheme='dark'].dmf .bg-light {background-color:var(--fill-secondary-alt);}
-	html body[data-color-scheme='dark'].dmf .bg-gradient, html body[data-color-scheme='dark'].dmf .bg-grad {background:linear-gradient(to bottom, var(--dark) 0%, var(--fill-gray-secondary-alt) 100%);}
-	html body[data-color-scheme='dark'].dmf .bg-grad-down {background:linear-gradient(to bottom, var(--dark) 0%, var(--fill-gray-secondary-alt) 100%);}
-	html body[data-color-scheme='dark'].dmf .bg-grad-up {background:linear-gradient(to bottom, var(--fill-gray-secondary-alt) 0%, var(--dark) 100%);}
-	html body[data-color-scheme='dark'].dmf .bg-blue-gradient, html body[data-color-scheme='dark'].dmf .bg-gradient-blue {background:linear-gradient(to bottom, var(--fill-blue-gradient-light) 0%, var(--fill-blue-gradient-dark) 100%);}
-	html body[data-color-scheme='dark'].dmf .bg-blue-gradient-alt {background: linear-gradient(90deg, #061830 0%, #102d48 100%);}
-	/* globalNav */
-	html body[data-color-scheme='dark'] #ac-globalnav {background: var(--fill-tertiary);}
-	/* localNav */
-	html body[data-color-scheme='dark'] .localnav.localnav-scrim .localnav-background,
-	html body[data-color-scheme='dark'] .localnav-scrim.localnav.localnav-background {
-		background-color: rgba(29, 29, 31, 0.9);
-	}
-	@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
-		html body[data-color-scheme='dark'] .localnav.localnav-scrim .localnav-background,
-		html body[data-color-scheme='dark'] .localnav-scrim.localnav.localnav-background {
-			background-color: rgba(29, 29, 31, 0.72);
+		// If theme-dark or theme-light is already applied, do nothing and lock it
+		if (body.classList.contains("theme-dark") || body.classList.contains("theme-light")) {
+
+			// Set the data-color-scheme attribute based on the existing theme
+			body.setAttribute('data-color-scheme', body.classList.contains("theme-dark") ? "dark" : "light");
+
+			// Prevent future modifications
+			window.__disableColorScheme = true;
+
+			// Hide the color picker immediately
+			const style = document.createElement('style');
+			style.textContent = '.color-scheme-toggle { display: none !important; }';
+			document.head.appendChild(style);
+
+			return;
 		}
-	}
-</style>
-<link rel="stylesheet" href="/assets/styles/globalnav.css?55202406207" type="text/css" />
 
-<link rel="stylesheet" href="/assets/styles/suggest-lang.css?17182448067" type="text/css" />
+		// Otherwise, set theme normally based on user settings or system preference
+		if (window.Settings && window.Settings.preferredColorScheme) {
+			const colorTheme = (window.Settings.preferredColorScheme === 'auto') && !prefersDark ? 'light'
+				: (window.Settings.preferredColorScheme === 'light') ? 'light' : 'dark';
+			body.setAttribute('data-color-scheme', colorTheme);
+			colorTheme === "dark" ? body.classList.add("theme-dark") : body.classList.add("theme-light");
+		} else {
+			const colorTheme = prefersDark ? 'dark' : 'light';
+			body.setAttribute('data-color-scheme', colorTheme);
+			prefersDark ? body.classList.add("theme-dark") : body.classList.add("theme-light");
+		}
+	})();
+</script>
+<link rel="stylesheet" href="/assets/styles/globalnav.css?02002524063" type="text/css" />
+
+<link rel="stylesheet" href="/assets/styles/suggest-lang.css?02002524063" type="text/css" />
 <div id="suggest-lang" class="ribbon hide" lang="en">
 	<div class="ribbon-content-wrapper">
 		<div class="ribbon-content row">
@@ -248,7 +241,7 @@
 <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
 <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
 <script src="/assets/scripts/ac-globalnav.built.js"></script>
-<link rel="stylesheet" href="/assets/styles/search.css?17182448067">
+<link rel="stylesheet" href="/assets/styles/search.css?02002524063">
 <script src="/assets/scripts/search.js?17182448067"></script>
 	<!-- metrics -->
 <script>
@@ -1093,7 +1086,7 @@
 			<script async src="/assets/scripts/color-scheme-toggle.js"></script>
 		</div>
 	</div>
-	<link rel="stylesheet" href="/assets/styles/language-dropdown.css?17182448067">
+	<link rel="stylesheet" href="/assets/styles/language-dropdown.css?02002524063">
 	<div class="language-dropdown dropdown-container legacy-form hidden">
 		<select class="dropdown" aria-label="Language Dropdown"></select>
 		<span class="dropdown-icon icon icon-chevrondown" aria-hidden="true"></span>
