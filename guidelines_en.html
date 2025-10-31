@@ -21,7 +21,7 @@
 <script async src="/assets/scripts/retinate.js?30152505148"></script>
 <script src="/assets/scripts/global-logout.js?17182448067"></script>
 
-<script async crossorigin src="https://sfss.cdn-apple.com/2.0.0-beta.2/sf-symbol.js?27012510303"></script>
+<script async crossorigin src="https://sfss.cdn-apple.com/2.0.0-beta.2/sf-symbol.js?26012510304"></script>
 <link rel="stylesheet" href="https://sf-saas.cdn-apple.com/2.4.0-beta.0/animations/all.css" type="text/css" />
 
 
@@ -258,18 +258,123 @@
 
 	<!-- metrics -->
 <script>
-    /* RSID: */
-    var s_account="awdappledeveloper"
+	/* RSID: */
+	var s_account="awdappledeveloper"
 </script>	
-<script src="/assets/metrics/scripts/analytics.js?072620243"></script>
+<script src="/assets/metrics/scripts/analytics.js"></script>
 <script>
-    s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
-    s.channel="www.en.developer"
-    s.channel="www.appstore.developer";
-
-    
-    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
-    var s_code=s.t();if(s_code)document.write(s_code)
+	s_sections = [
+		{
+			"pattern": "^/documentation",
+			"channel": "www.documentation.developer"
+		},
+		{
+			"pattern": "^/library",
+			"channel": "www.documentation.developer"
+		},
+		{
+			"pattern": "^/tutorials",
+			"channel": "www.documentation.developer"
+		},	
+		{
+			"pattern": "human\\-interface\\-guidelines",
+			"channel": "www.hig.developer"
+		},
+		{
+			"pattern": "/testflight/",
+			"channel": "www.appstoreconnect.developer"
+		},
+		{
+			"pattern": "/app\\-store\\-connect/",
+			"channel": "www.appstoreconnect.developer"
+		},
+		{
+			"pattern": "/support/app\\-store\\-connect/",
+			"channel": "www.appstoreconnect.developer"
+		},
+		{
+			"pattern": "/help/app\\-store\\-connect/",
+			"channel": "www.appstoreconnect.developer"
+		},
+		{
+			"pattern": "/wwdc/",
+			"channel": "www.wwdc.developer"
+		},
+		{
+			"pattern": "/wwdc\\d{2}/",
+			"channel": "www.wwdc.developer"
+		},
+		{
+			"pattern": "/videos/",
+			"channel": "www.videos.developer"
+		},
+		{
+			"pattern": "^/account",
+			"channel": "www.account.developer"
+		},
+		{
+			"pattern": "downloads?",
+			"channel": "www.download.developer"
+		},
+		{
+			"pattern": "/localization/",
+			"channel": "www.appstore.developer"
+		},	
+		{
+			"pattern": "/app\\-store/",
+			"channel": "www.appstore.developer"
+		},
+		{
+			"pattern": "/in\\-app\\-purchase/",
+			"channel": "www.appstore.developer"
+		},
+		{
+			"pattern": "/cn/",
+			"channel": "www.cn.developer"
+		},
+		{
+			"pattern": "/jp/",
+			"channel": "www.jp.developer"
+		},
+		{
+			"pattern": "/kr/",
+			"channel": "www.kr.developer"
+		},
+		{
+			"pattern": "/de/",
+			"channel": "www.de.developer"
+		},
+		{
+			"pattern": "/la/",
+			"channel": "www.la.developer"
+		},
+		{
+			"pattern": "/fr/",
+			"channel": "www.fr.developer"
+		},
+		{
+			"pattern": "/it/",
+			"channel": "www.it.developer"
+		},
+		{
+			"pattern": "/br/",
+			"channel": "www.br.developer"
+		}
+	];
+	
+	s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+	s.channel="www.en.developer";
+	
+	s_sections.forEach((s_section) => {
+		var regex = new RegExp(s_section.pattern);
+		
+		if(location.pathname.search(regex) !== -1) {
+			s.channel=s_section.channel;
+		}
+	});
+	
+	/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+	var s_code=s.t();if(s_code)document.write(s_code)
 </script>
 <!-- /metrics -->
 	<link rel="stylesheet" property="stylesheet" href="/assets/styles/localnav.css" type="text/css" />
