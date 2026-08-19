@@ -21,7 +21,7 @@
 <script async src="/assets/scripts/retinate.js?35212621148"></script>
 <script src="/assets/scripts/global-logout.js?35212621148"></script>
 
-<script async crossorigin src="https://sfss.cdn-apple.com/2.0.0-beta.2/sf-symbol.js?27012610230"></script>
+<script async crossorigin src="https://sfss.cdn-apple.com/2.0.0-beta.2/sf-symbol.js?27012610231"></script>
 
 
 
@@ -221,6 +221,11 @@
 		if (window.__didRunColorThemeScript) {
 			return;
 		}
+
+		if (window.angular) {
+			return;
+		}
+
 		window.__didRunColorThemeScript = true;
 
 		const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -256,7 +261,6 @@
 		}
 	})();
 </script>
-
 
 <link rel="stylesheet" href="/assets/styles/suggest-lang.css?34212621148" type="text/css" />
 <div id="suggest-lang" class="ribbon hide" lang="en">
@@ -528,7 +532,7 @@
 											<ul class="globalnav-submenu-list" aria-labelledby="community-engage-heading">
 												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 2;"><a href="/community/" class="globalnav-submenu-link">Overview</a></li>
 												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 3;"><a href="/events/" class="globalnav-submenu-link">Meet with Apple events</a></li>
-												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 4;"><a href="/community/events/" class="globalnav-submenu-link">Community-driven events</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 4;"><a href="/community/events/" class="globalnav-submenu-link">Community events</a></li>
 												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 5;"><a href="/forums/" class="globalnav-submenu-link">Developer Forums<span class="loc-en-only"></span></a></li>
 												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 6;"><a href="https://opensource.apple.com" class="globalnav-submenu-link">Open Source<span class="loc-en-only"></span></a></li>
 											</ul>
@@ -1699,7 +1703,7 @@
 	</main>
 	
 	<link rel="stylesheet" href="/assets/styles/footer.dist.css?34212621148">
-<footer data-aa-content-module="global-footer” id="footer" class="footer" role="contentinfo" aria-labelledby="footer-label">
+<footer data-aa-content-module="global-footer" id="footer" class="footer" role="contentinfo" aria-labelledby="footer-label">
     <div class="footer-content">
         <h2 class="footer-label" id="footer-label">Developer Footer</h2>
 		<developer-breadcrumbs>
@@ -1871,7 +1875,7 @@
         <section class="footer-mini" vocab="http://schema.org/" typeof="Organization">
 	<div class="footer-mini-news">
 		<div class="copy">
-			<div class="footer-mini-legal-link">Read the <a href="/news/">latest news</a>.</div> Get the <a href="https://apps.apple.com/us/app/apple-developer/id640199958">Apple Developer app</a>.
+			<div class="footer-mini-legal-link">Read the <a href="/news/">latest news</a>.</div> <div class="footer-mini-legal-link">Get the <a href="https://apps.apple.com/us/app/apple-developer/id640199958">Apple Developer app</a>.</div> Follow us on <a href="https://space.bilibili.com/429911174">bilibili</a>, <a href="https://www.linkedin.com/showcase/appledeveloper/">LinkedIn</a>, <a href="https://mp.weixin.qq.com/s/slhQ1RBYUpJ71gwEUlwSTg">WeChat</a>, and <a href="https://www.youtube.com/@AppleDeveloper">YouTube</a>.
 		</div>
 		<div class="content">
 			<div class="color-scheme-toggle"

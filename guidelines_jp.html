@@ -21,7 +21,7 @@
 <script async src="/assets/scripts/retinate.js?35212621148"></script>
 <script src="/assets/scripts/global-logout.js?35212621148"></script>
 
-<script async crossorigin src="https://sfss.cdn-apple.com/2.0.0-beta.2/sf-symbol.js?26012610230"></script>
+<script async crossorigin src="https://sfss.cdn-apple.com/2.0.0-beta.2/sf-symbol.js?27012610231"></script>
 
 
 
@@ -221,6 +221,11 @@
 		if (window.__didRunColorThemeScript) {
 			return;
 		}
+
+		if (window.angular) {
+			return;
+		}
+
 		window.__didRunColorThemeScript = true;
 
 		const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -256,7 +261,6 @@
 		}
 	})();
 </script>
-
 
 <link rel="stylesheet" href="/assets/styles/suggest-lang.css?34212621148" type="text/css" />
 <div id="suggest-lang" class="ribbon hide" lang="en">
@@ -528,7 +532,7 @@
 											<ul class="globalnav-submenu-list" aria-labelledby="community-engage-heading">
 												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 2;"><a href="/jp/community/" class="globalnav-submenu-link">概要</a></li>
 												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 3;"><a href="/jp/events/" class="globalnav-submenu-link">「Appleに相談」イベント</a></li>
-												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 4;"><a href="/community/events/" class="globalnav-submenu-link">コミュニティによるイベント<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 4;"><a href="/community/events/" class="globalnav-submenu-link">コミュニティイベント<span class="loc-en-only"></span></a></li>
 												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 5;"><a href="/forums/" class="globalnav-submenu-link">デベロッパフォーラム<span class="loc-en-only"></span></a></li>
 												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 6;"><a href="https://opensource.apple.com" class="globalnav-submenu-link">オープンソース<span class="loc-en-only"></span></a></li>
 											</ul>
@@ -1872,7 +1876,7 @@
         <section class="footer-mini" vocab="http://schema.org/" typeof="Organization" lang="ja-JP">
 	<div class="footer-mini-news">
 		<div class="copy">
-			<div class="footer-mini-legal-link"><a href="/jp/news/">最新ニュースを読む</a>。</div> <a href="https://apps.apple.com/jp/app/apple-developer/id640199958">Apple Developerアプリ</a>を入手する。
+			<div class="footer-mini-legal-link"><a href="/jp/news/">最新ニュース</a>を読む </div> <div class="footer-mini-legal-link"><a href="https://apps.apple.com/jp/app/apple-developer/id640199958">Apple Developerアプリ</a>を入手 </div> <a href="https://space.bilibili.com/429911174">bilibili</a>、<a href="https://www.linkedin.com/showcase/appledeveloper/">LinkedIn</a>、<a href="https://mp.weixin.qq.com/s/slhQ1RBYUpJ71gwEUlwSTg">WeChat</a>、<a href="https://www.youtube.com/@AppleDeveloper">YouTube</a>でフォロー
 		</div>
 		<div class="content">
 			<div class="color-scheme-toggle"
